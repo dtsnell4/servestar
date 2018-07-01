@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>ServeStar</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:500" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+	<style type="text/css">
+		body {
+			
+			font-family: 'Encode Sans Condensed', sans-serif;
+		}
+		header {
+			background-color: #fff; 
+			height: 80px;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			border-bottom: 2px solid #ff021b;
+			z-index: 200
+		}
+		header img {
+		    height: 60px;
+    		margin: 10px;
+		}
+		.about {
+			margin: 20px;
+			font-size: 22px
+		}
+		div[id^="sec"], .deepBg {
+			/*height: 683px;
+			width: 1024px;*/
+			position: relative;
+		}
+		.container {
+			padding: 0 0 0 0;
+			z-index: 10;
+			background-color: #fff;
+		}
+/*		.deepBg {
+			z-index: -1;
+			position: fixed;
+			top: 80px;
+			background-image: url('images/bg1.jpg');
+			background-repeat: no-repeat;
+		    background-color: #fff;
+		}*/
+		.callout {
+			position: absolute;
+			color: #fff;
+			padding: 10px 20px 5px 20px;
+			border-radius: 5px;
+			background: rgba(0,0,0,.5);
+			
+		}
+		#sec1 {
+			margin-top: 80px;
+			position: relative;
+		}
+		#sec1 .callout {
+			width: 50%;
+			-ms-transform: skewY(-10deg); 
+		    -webkit-transform: skewX(-10deg); 
+		    transform: skewX(-10deg);
+		    position: absolute;
+		    bottom: 20px;
+		    right: 20px;
+		}
+		#sec2, #sec3 {
+			position: relative;
+		}
+		#sec2 .callout {
+			-ms-transform: skewY(-10deg);
+		    -webkit-transform: skewX(-10deg);
+		    transform: skewX(-10deg);
+		    position: absolute;
+		    bottom: 10px;
+		    right: 0px;
+		    width: 57%;
+		}
+		#sec3 .callout {
+			-ms-transform: skewY(-10deg);
+		    -webkit-transform: skewX(-10deg);
+		    transform: skewX(-10deg);
+		    position: absolute;
+		    top: 10px;
+		    left: 16px;
+		    width: 51%;
+		}
+		section[class^="cont"] {
+			padding: 50px 20px;
+		}
+		.cont1 img {
+			max-height: 200px;
+			margin: 0 auto;
+    		display: block;
+		}
+		.cont1 div:nth-child(2) {
+			padding: 20px 50px;
+		}
+		.cont1 h5, .cont2 h5, .cont2 h4, .cont4 h1 {
+			color: #30507b;
+		}
+/*		.cont2 div:nth-child(1) {
+			width: 50%;
+		}*/
+		/*.cont2 div:nth-child(2) {
+			padding: 20px 40px;
+		}*/
+		.cont2 img {
+			display: block;
+			margin: 0 auto;
+			max-width: 50%;
+		}
+		.stars img {
+			max-width: 10%;
+			margin: 0 10px;
+		}
+		.blue-row {
+			padding: 50px 40px;
+			background-color: #4a7bb4;
+			color: #fff;
+			border-top: 3px solid #d9dbdb;
+    		border-bottom: 3px solid #d9dbdb;
+		}
+		@media (min-width: 1024px) {
+			body {
+				background-color: #00e5ff;
+			}
+			header {
+				max-width: 1024px
+			}
+			.container {
+				max-width: 1024px;
+				width: 100%;
+			}
+			section[class^="cont"] {
+				padding: 100px 0px;
+			}
+			#sec1 .callout {
+				width: 44%;
+			    right: 50px;
+			}
+			#sec1 .callout h4 {
+				font-size: 3.5rem;
+			}
+			#sec2 .callout {
+			    right: 20px;
+			    width: 53%;
+			}
+			#sec2 .callout h6 {
+				font-size: 2.5rem;
+			}
+			#sec3 .callout {
+			    left: 33px;
+			    width: 37%;
+			}
+			#sec3 .callout h5 {
+				font-size: 3rem;
+			}
+			.cont1 img {
+				max-height: 300px;
+			}
+			.cont1 h5 {
+				font-size: 2.25rem;
+				margin-bottom: 2rem;
+			}
+			.cont1 p {
+				font-size: 1.75rem;
+			}
+			.cont2 div:nth-child(2) {
+				padding: 20px 10px 20px 110px;
+			}
+			.cont2 div:nth-child(2) h4 {
+				font-size: 2rem;
+			}
+			.cont2 div:nth-child(2) h5 {
+				font-size: 1.5rem;
+			}
+			.cont3 h5 {
+				font-size: 2.3rem;
+				margin-bottom: 2rem;
+			}
+			.cont3 p {
+				font-size: 1.5rem;
+			}
+			.cont4 h4 {
+				font-size: 2rem;
+			}
+			.cont4 p {
+				font-size: 1.5rem
+			}
+			.blue-row {
+				padding: 100px;
+			}
+		}
+	</style>
+
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="float-left">
+				<img src="images/ServeStar-Logo.png">
+			</div>
+			<div class="about float-right">
+				<button type="button" class="btn btn-link btn-lg" data-toggle="modal" data-target="#contact">Contact</button>
+			</div>
+		</header>
+		<div id="sec1" class="row">
+			<div class="col">
+				<img src="images/bg1.jpg" class="img-fluid" alt="ServeStar- Revolutionizing the Service Industry">
+				<div class="callout">
+					<h4>Revolutionizing the Service Industry</h4>
+				</div>
+			</div>
+		</div>
+		<section class="cont1 row align-items-center">
+			<div class="col-md-4 align-middle">
+				<img src="images/Server-card.png">
+			</div>
+			<div class="col-md-8 align-middle">
+				<h5 className="text-center"><i class="far fa-comments"></i> Enabling a new level of communication between servers and their customers</h5>
+				<p className="text-center">
+					ServeStar is a social media platform specifically designed to bring customers and servers closer together.  By building a relationship with customers, servers can foster loyalty, repeat business, gain confidence and experience.
+				</p>
+			</div>
+		</section>
+		<section id="sec2">
+			<img src="images/bg2.jpg" class="img-fluid" alt="ServeStar- Revolutionizing the Service Industry">
+			<div class="callout">
+				<h6>With a customizable experience, customers can fine tune their search to their individual tastes.</h6>
+			</div>
+		</section> 
+		<section class="cont2 row flex-md-row-reverse">
+			<div class="col-md-6 mx-auto">
+				<img src="images/iphoneX.png">
+			</div>
+			<div class="col-md-6 text-center">
+				<h4 class="mb-4"><i class="fas fa-list d-none d-md-inline-block"></i> A Wide Range of Preferences</h4>
+				<span class="d-inline-block">
+					<h5 class="pl- text-left"><i class="fas fa-check-double"></i>&nbsp;&nbsp; Style of Food</h5>
+					<h5 class="pl- text-left"><i class="fas fa-check-double"></i>&nbsp;&nbsp; Class of Beverages</h5>
+					<h5 class="pl- text-left"><i class="fas fa-check-double"></i>&nbsp;&nbsp; Atmoshpere</h5>
+					<h5 class="pl- text-left"><i class="fas fa-check-double"></i>&nbsp;&nbsp; Companions</h5>
+					<h5 class="pl- text-left"><i class="fas fa-check-double"></i>&nbsp;&nbsp; Establishment Type</h5>
+					<h5 class="pl- text-left"><i class="fas fa-check-double"></i>&nbsp;&nbsp; Cost</h5>
+					<h5 class="pl- text-left"><i class="fas fa-check-double"></i>&nbsp;&nbsp; Location</h5>
+				</span>
+			</div>
+		</section>
+ 		<section id="sec3">
+ 			<img src="images/bg3.jpg" class="img-fluid" alt="ServeStar- Revolutionizing the Service Industry">
+			<div class="callout">
+				<h5>Customer Ratings Provide Feedback On The Server's Quality Of Service</h5>
+			</div>
+		</section> 
+		<section class="cont3">
+			<div class="mx-sm-2 mx-md-5">
+				<div class="text-center mb-5 stars">
+					<img src="images/chicago-star.png">
+					<img src="images/chicago-star.png">
+					<img src="images/chicago-star.png">
+					<img src="images/chicago-star.png">
+					<img src="images/chicago-star.png">
+				</div>
+				<h5>Customers rate servers based on a wide variety categories.</h5>
+				<p>
+					When looking for the server that meets their needs, they can easily see the server's rating and read other customers' reviews.  They can also rate other customers' reviews based on the helpfulness of the review.
+				</p>
+				<p>
+					These customer rating aggregate to the server's "ServeStar Rating".  That's how cusotmers...  and potential employers...  Can instantly recognize their level of customer service.
+				</p>
+			</div>
+
+		</section>
+		<section class="blue-row">
+			<h2 class="text-center">ServeStar Will Revolutionize The Service Industry Hiring Process</h2>
+		</section>
+		<section class="cont4 row">
+			<div class="col-md-6 text-center">
+				<img src="images/interview.jpg"  class="img-fluid pt-5">
+			</div>
+			<div class="col-md-6 pr-4">
+				<h4 class="mt-3">With ServeStar, Managers Can Hire With Confidence</h4>
+				<p>When a manager intervues a candidate who is on ServeStar, they can immediately know their quality of customer service.</p>
+				<p>No more guessing.  No more trial periods.</p>
+				<p>Managers can know with confidence that the candidate provides a specific level of service based on customer feedback.</p>
+			</div>
+		</section>
+		<section class="blue-row text-center">
+			<h2 class="">Learn More.  Contact Us Now.</h2>
+		</section>
+	</div>
+
+	<div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="exampleModalLabel">Learn More About ServeStar</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="text-center stars">
+						<img src="images/chicago-star.png">
+						<img src="images/chicago-star.png">
+						<img src="images/chicago-star.png">
+						<img src="images/chicago-star.png">
+						<img src="images/chicago-star.png">
+					</div>
+					<h5 class='mt-4 mb-4 text-center'>Contact Kellen Barth at:</h5>
+					<h5 class="text-center">224.330.9908</h5>
+					<h5 class="text-center">kellen.barth@gmail.com</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>
